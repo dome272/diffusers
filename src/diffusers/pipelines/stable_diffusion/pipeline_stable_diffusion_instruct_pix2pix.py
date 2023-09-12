@@ -91,7 +91,6 @@ class StableDiffusionInstructPix2PixPipeline(DiffusionPipeline, TextualInversion
     """
     model_cpu_offload_seq = "text_encoder->unet->vae"
     _optional_components = ["safety_checker", "feature_extractor"]
-    _exclude_from_cpu_offload = ["safety_checker"]
 
     def __init__(
         self,
